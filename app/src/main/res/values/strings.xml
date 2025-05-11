@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CryptoTracker</string>
+    <string name="price_label">Price:</string>
+    <string name="change_label">24h Change:</string>
+</resources>
