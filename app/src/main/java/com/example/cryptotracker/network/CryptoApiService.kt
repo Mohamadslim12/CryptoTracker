@@ -13,4 +13,6 @@ interface CryptoApiService {
         @Query("page") page: Int = 1,
         @Query("sparkline") sparkline: Boolean = false
     ): List<Crypto>
+
 }
+

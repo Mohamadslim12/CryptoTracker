@@ -20,7 +20,11 @@ fun CryptoListScreen(
     cryptos: List<Crypto>,
     onItemClick: (String) -> Unit
 ) {
-    LazyColumn {
+    LazyColumn(
+        modifier = Modifier
+            .fillMaxSize()
+            .safeDrawingPadding()
+    ) {
         items(cryptos) { coin ->
             Card(
                 modifier = Modifier
