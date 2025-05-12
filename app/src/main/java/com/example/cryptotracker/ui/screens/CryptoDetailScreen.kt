@@ -1,4 +1,3 @@
-// ui/screens/CryptoDetailScreen.kt
 package com.example.cryptotracker.ui.screens
 
 import androidx.compose.foundation.layout.*

@@ -11,7 +11,9 @@ import com.example.cryptotracker.ui.theme.CryptoTrackerTheme
 
 class MainActivity : ComponentActivity() {
     private val viewModel by lazy {
-        CryptoViewModel(CryptoRepository(RetrofitBuilder.apiService))
+        CryptoViewModel(
+            CryptoRepository(RetrofitBuilder.apiService)
+        )
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,3 +25,4 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
