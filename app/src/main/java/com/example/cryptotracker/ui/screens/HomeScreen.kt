@@ -21,8 +21,7 @@ enum class HomeFilter { Change24h, MostExpensive, MarketCap }
 fun HomeScreen(
     cryptos: List<Crypto>,
     onSearch: (String) -> Unit,
-    onItemClick: (String) -> Unit,
-    onViewAll: () -> Unit
+    onItemClick: (String) -> Unit
 ) {
     var query by remember { mutableStateOf("") }
     var filter by remember { mutableStateOf(HomeFilter.Change24h) }
@@ -73,10 +72,7 @@ fun HomeScreen(
             }.take(5)
         }
 
-        LazyColumn(
-            verticalArrangement = Arrangement.spacedBy(8.dp),
-            modifier = Modifier.fillMaxWidth()
-        ) {
+        LazyColumn(verticalArrangement = Arrangement.spacedBy(8.dp)) {
             items(top5) { coin ->
                 Card(
                     modifier = Modifier
@@ -112,16 +108,8 @@ fun HomeScreen(
                 }
             }
         }
-
-        Spacer(Modifier.height(16.dp))
-
-        Button(
-            onClick = onViewAll,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text("View All Cryptos")
-        }
     }
 }
+
 
 
